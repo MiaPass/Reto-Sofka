@@ -8,7 +8,7 @@
 
 La idea general fue crear una aplicación en la cual se puedan ver las distintas naves disponibles junto con información relevante de las mismas y a partir de ella poder, entre otras cosas:
 
- Buscar naves
+ Ver naves
  Filtrar 
  Agregar nuevas
 
@@ -80,9 +80,6 @@ Logré desarrollar un servidor en Node/Express con las siguientes rutas:
 
 - [ ] __GET /naves/all__:
  Obtiene un listado de las naves
-- [ ] __GET /naves/search/{nombre de la nave}__:
- Obtiene un listado de las naves que contengan la palabra ingresada como parametro
- Si no existe ningún nave mostrar un mensaje adecuado
 - [ ] __POST /naves/create__:
  Recibe los datos recolectados desde el formulario controlado de la ruta de creación de nave por body
  Crea una nave en la base de datos

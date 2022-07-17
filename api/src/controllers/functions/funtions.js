@@ -40,17 +40,18 @@ const search = async (data) => {
 
     /* Lanzaderas */
 
-    let lanzaderas = await Lanzaderas.findAll({ nombre: data });
+    let lanzaderas = await Lanzaderas.find({ nombre: data });
     result = [...result, ...lanzaderas];
 
     /* NoTripuladas */
 
-    let noTrip = await NoTripuladas.findAll({ nombre: data });
+    let noTrip = await NoTripuladas.find({ nombre: data });
+    console.log(noTrip);
     result = [...result, ...noTrip];
 
     /* Tripuladas */
 
-    let trip = await Tripuladas.findAll({ nombre: data });
+    let trip = await Tripuladas.find({ nombre: data });
     result = [...result, ...trip];
 
     console.log(result);
@@ -107,12 +108,23 @@ const newShip = async (data) => {
   }
 };
 
+/* Esta funcion crea 9 naves (3 de cada tipo) cuando se inicia el front para tener de ejemplo  */
+
 const firstTime = async (data) => {
   try {
     // console.log(data[0]);
-    const first = await Lanzaderas.find({ id: data[0].id });
+    const first = await Lanzaderas.find(
+      { id: data[0].id } || { id: data[1].id } || { id: data[2].id }
+    );
+    const second = await NoTripuladas.find(
+      { id: data[3].id } || { id: data[4].id } || { id: data[5].id }
+    );
+    const third = await Tripuladas.find(
+      { id: data[6].id } || { id: data[7].id } || { id: data[8].id }
+    );
+
     // console.log(first);
-    if (first.length === 0) {
+    if (first.length === 0 && second.length === 0 && third.length === 0) {
       data.map(async (nave) => {
         // console.log(nave);
         switch (nave.tipo) {

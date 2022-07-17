@@ -20,6 +20,7 @@ router.get("/all", (req, res) => {
 
 router.get("/search/:data", (req, res) => {
   const { data } = req.params;
+  console.log(data);
   search(data)
     .then((result) => res.json(result))
     .catch((err) => console.log("navesR: search  -->  ", err));
