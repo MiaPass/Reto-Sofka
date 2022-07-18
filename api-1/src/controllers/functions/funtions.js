@@ -113,15 +113,9 @@ const newShip = async (data) => {
 const firstTime = async (data) => {
   try {
     // console.log(data[0]);
-    const first = await Lanzaderas.find(
-      { id: data[0].id } || { id: data[1].id } || { id: data[2].id }
-    );
-    const second = await NoTripuladas.find(
-      { id: data[3].id } || { id: data[4].id } || { id: data[5].id }
-    );
-    const third = await Tripuladas.find(
-      { id: data[6].id } || { id: data[7].id } || { id: data[8].id }
-    );
+    const first = await Lanzaderas.find();
+    const second = await NoTripuladas.find();
+    const third = await Tripuladas.find();
 
     // console.log(first);
     if (first.length === 0 && second.length === 0 && third.length === 0) {
