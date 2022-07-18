@@ -1,0 +1,19 @@
+hr{
+    width: 500px;
+}
+
+.create-buttons button, button{
+    margin-left: 10px;
+    height: 30px;
+    width: 200px;
+}
+
+.create-buttons {
+    margin-right: 10px;
+}
+
+/* .create-buttons button{
+    margin-left: 10px;
+    height: 30px;
+    width: 200px;
+} */

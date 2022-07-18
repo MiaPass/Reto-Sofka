@@ -1,0 +1,55 @@
+.options{
+    margin-top: 10px;
+}
+
+.options button{
+    margin-left: 30px;
+    height: 30px;
+
+}
+
+#naves{
+    border-radius: 10px;
+    border:1px solid #a6a6a6;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.ships{
+    justify-content: space-between;
+}
+
+.ships .lanzaderas{
+    float: left;
+    margin-left: 12%;
+    margin-top: 5px;
+}
+/* .ships .lanzaderas h2{
+  margin-left: 16%;
+} */
+
+.ships .notripuladas{
+    float: left;
+    margin-left: 15%;
+    margin-top: 5px;
+}
+
+/* .ships .notripuladas h2{
+  margin-left: 16%;
+} */
+
+.ships .tripuladas{
+    float: left;
+    margin-left: 15%;
+    margin-top: 5px;
+}
+
+/* .ships .tripuladas h2{
+  margin-left: 16%;
+} */
+
+
+.buttonDelete{
+   margin-bottom: 10px;
+}
+
